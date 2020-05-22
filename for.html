@@ -10,11 +10,34 @@
     <body>
         <script>
             // 0から100の数字をコンソールに表示します。
-            for (let i = 0; i <= 100; index++) {
-                console.log(i);
+            for (let i = 0; i <= 100; i++) {
+                console.log(i)
+            }
+
+            const nameList = [
+                "廣澤",
+                "杉山",
+                "小泉",
+                "清水"
+            ]
+
+            for (const name of nameList) {
+                console.log(name)
             }
 
             // [...Array(101).keys].forEach((v) => {console.log(v);})
+
+            // 3項演算子
+            const koizumi = "おにいさん"
+
+            console.log(koizumi === "おにいさん" ? "Good" : "まじかよ…");
+
+            if (koizumi === "おにいさん") {
+                console.log("Good");
+            } else {
+                console.log("まじかよ…");
+            }
+
         </script>
     </body>
 
