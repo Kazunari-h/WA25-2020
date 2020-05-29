@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>どっちかな？</title>
+        <style>
+            .wrapper {
+                display: flex;
+            }
+
+            #koizumi,
+            #tom {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            img {
+                width: 200px;
+                height: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>どっちがTOMかな？</h1>
+        <div class="wrapper">
+            <div id="koizumi">
+                <img src="koizumi.png" alt="小泉">
+            </div>
+            <div id="tom">
+                <img src="tom.jpg" alt="TOM">
+            </div>
+        </div>
+        <div id="result">
+
+        </div>
+        <script>
+            const koizumi = document.getElementById("koizumi")
+            const tom = document.getElementById("tom")
+            const result = document.getElementById("result")
+
+            koizumi.addEventListener("click", function () {
+                result.innerText = "小泉先生が言いそうなこと"
+            })
+            tom.addEventListener("click", function () {
+                result.innerText = "正解ー！！"
+            })
+        </script>
+    </body>
+
+</html>
