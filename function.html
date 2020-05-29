@@ -14,6 +14,8 @@
         <p>
             合計金額: <span id="price">0</span>円
         </p>
+        <ul id="list">
+        </ul>
 
         <script>
             // button取得します。
@@ -24,13 +26,22 @@
             // 唐揚げボタン を押した回数
             let count = 0
 
+            const span = document.getElementById("price")
+            const list = document.getElementById("list")
+
             // button clickイベントを取得
             button.addEventListener("click", function () {
                 // clickイベントが行われたら、唐揚げの金額を表示
                 count += 1;
-                const span = document.getElementById("price")
                 span.innerText = `${count * 200}`
+
+                // list に 購入履歴を追加
+                const li = document.createElement("li")
+                li.innerText = `唐揚げ購入合計個数: ${count}個`
+                list.appendChild(li);
+
             })
+
         </script>
     </body>
 
