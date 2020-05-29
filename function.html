@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>関数の練習</title>
+    </head>
+
+    <body>
+        <button class="food" id="karaage">
+            からあげ
+        </button>
+        <p>
+            合計金額: <span id="price">0</span>円
+        </p>
+
+        <script>
+            // button取得します。
+            // const button = document.getElementById("karaage")
+            // or
+            const button = document.querySelector(".food")
+
+            // 唐揚げボタン を押した回数
+            let count = 0
+
+            // button clickイベントを取得
+            button.addEventListener("click", function () {
+                // clickイベントが行われたら、唐揚げの金額を表示
+                count += 1;
+                const span = document.getElementById("price")
+                span.innerText = `${count * 200}`
+            })
+        </script>
+    </body>
+
+</html>
