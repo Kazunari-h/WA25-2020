@@ -6,10 +6,16 @@ document.getElementById("button")
             console.log("押されたよ");
 
             // 数字のエリアをドラムロールさせる
-            setInterval(function() {
+            const timer = setInterval(function() {
                 const random = Math.floor(Math.random() * 100)
                 document.getElementById("num").innerText = random;
             }, 50)
 
-            // 3秒後にドラムロールを止めて、抽選された番号を表示する
+            // 3秒後にドラムロールを止めて、抽選した番号を表示する
+            setTimeout(function() {
+                clearInterval(timer);
+                const random = Math.floor(Math.random() * 100)
+                document.getElementById("num").innerText = random;
+            }, 3000)
+            
         })
